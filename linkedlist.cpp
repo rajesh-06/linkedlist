@@ -1,3 +1,4 @@
+//including library
 #include <iostream>
 using namespace std;
 class node
@@ -79,15 +80,7 @@ public:
         // to delete temp
          delete temp;
     }
-    // for displaying data
-    void display(){
-        node * current = head;
-        while(current != NULL){
-            cout << current->data << "->";
-            current = current->next;
-        }
-        cout << endl;
-    }
+    
     //using delete at
     void deletAt(int pos ){
 
@@ -103,8 +96,8 @@ public:
 	current->next = current -> next -> next;
 	delete temp;
 	}
-	//using count
-	void countItems(){
+    //using count
+    void countItems(){
 	node *current = head;
 
 	cout<<"the no. of linked list is ";
@@ -115,8 +108,17 @@ public:
 	}
 	cout<<i<<endl;
 	}
-
-};
+    // for displaying data
+    void display(){
+        node * current = head;
+        while(current != NULL){
+            cout << current->data << "->";
+            current = current->next;
+        }
+        cout << endl;
+    }
+    
+    };
     int main(){
     linkedlist l1;
         l1.insert(1);
